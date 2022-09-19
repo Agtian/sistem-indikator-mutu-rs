@@ -17,13 +17,29 @@ class UserFactory extends Factory
      */
     public function definition()
     {
-        return [
-            'name' => fake()->name(),
-            'email' => fake()->unique()->safeEmail(),
-            'email_verified_at' => now(),
-            'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
-            'remember_token' => Str::random(10),
+        $data = [
+                'id_ruang'          => '1',
+                'id_ruang_sub'      => '1',
+                'nama'              => 'Administrator Test',
+                'id_akses'          => '1',
+                'username'          => 'administrator-test',
+                'password'          => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
+                'email'             => fake()->unique()->safeEmail(),
+                'email_verified_at' => now(),
+                'remember_token'    => Str::random(10)
         ];
+            // [
+            //     'id_ruang'          => '2', // bank darah
+            //     'id_ruang_sub'      => '2', // bank darah
+            //     'nama'              => 'bankdarah test',
+            //     'id_akses'          => '1',
+            //     'username'          => 'bankdarah-test',
+            //     'password'          => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
+            //     'email'             => fake()->unique()->safeEmail(),
+            //     'email_verified_at' => now(),
+            //     'remember_token'    => Str::random(10),
+            // ];
+        return $data;
     }
 
     /**

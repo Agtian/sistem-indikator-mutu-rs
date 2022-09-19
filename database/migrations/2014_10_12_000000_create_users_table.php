@@ -13,16 +13,16 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('TM_USER', function (Blueprint $table) {
+        Schema::create('users', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('ID_RUANG');
-            $table->bigInteger('ID_RUANG_SUB');
-            $table->string('NAMA');
-            $table->bigInteger('I_AKSES');
-            $table->string('USERNAME');
-            $table->string('PASSWORD');
-            $table->string('EMAIL')->unique();
-            $table->timestamp('EMAIL_VERIFIED_AT')->nullable();
+            $table->bigInteger('id_ruang');
+            $table->bigInteger('id_ruang_sub');
+            $table->string('nama');
+            $table->bigInteger('id_akses');
+            $table->string('username');
+            $table->string('password');
+            $table->string('email')->unique()->nullable();
+            $table->timestamp('email_verified_at')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });
