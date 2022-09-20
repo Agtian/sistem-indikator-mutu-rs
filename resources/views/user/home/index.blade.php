@@ -36,22 +36,26 @@
                             <div class="profile-photo">
                                 <img src="{{ asset('assets/vendors/images/photo1.jpg') }}" alt="" class="avatar-photo">
                             </div>
-                            <h5 class="text-center h5 mb-0">{{ auth()->user()->id_ruang }}</h5>
+                            <h5 class="text-center h5 mb-0">{{ $detailUser['nama_ruang'] }}</h5>
                             <p class="text-center text-muted font-14">Sistem Indikator Mutu</p>
                             <div class="profile-info">
                                 <h5 class="mb-20 h5 text-blue">Informasi Profil</h5>
                                 <ul>
                                     <li>
                                         <span>Email Address:</span>
-                                        FerdinandMChilds@test.com
+                                        {{ $detailUser['email'] }}
+                                    </li>
+                                    <li>
+                                        <span>Ruang:</span>
+                                        {{ $detailUser['nama_ruang'] }}
+                                    </li>
+                                    <li>
+                                        <span>User PIC:</span>
+                                        {{ $detailUser['nama'] }}
                                     </li>
                                     <li>
                                         <span>Phone Number PIC:</span>
                                         619-229-0054
-                                    </li>
-                                    <li>
-                                        <span>Ruang:</span>
-                                        {{ auth()->user()->id_ruang }}
                                     </li>
                                 </ul>
                             </div>
