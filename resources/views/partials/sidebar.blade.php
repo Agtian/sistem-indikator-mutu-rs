@@ -104,7 +104,7 @@
                         <span class="micon dw dw-edit3"></span><span class="mtext">KELOLA DATA</span>
                     </a>
                     <ul class="submenu">
-                        <li><a href="index.html">Input Data</a></li>
+                        <li><a href="{{ route('input') }}">Input Data</a></li>
                         <li><a href="index.html">Ubah Data</a></li>
                     </ul>
                 </li>

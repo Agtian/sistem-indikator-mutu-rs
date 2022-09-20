@@ -27,7 +27,7 @@ class AuthController extends Controller
         if ($validated) {
             if (auth()->user()->id_akses == 1 && $validated == true) {
                 // Jika admin
-                return redirect()->route('home')->with('success', 'Login Successfull');
+                return redirect()->route('dashboard')->with('success', 'Login Successfull');
             } else {
                 // Jika bukan admin
                 return redirect()->route('home')->with('success', 'Login Successfull');

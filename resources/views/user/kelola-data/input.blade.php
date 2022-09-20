@@ -8,12 +8,12 @@
                     <div class="row">
                         <div class="col-md-6 col-sm-12">
                             <div class="title">
-                                <h4>Home</h4>
+                                <h4>Input Data</h4>
                             </div>
                             <nav aria-label="breadcrumb" role="navigation">
                                 <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">blank</li>
+                                    <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Input Data</li>
                                 </ol>
                             </nav>
                         </div>
@@ -32,6 +32,7 @@
                     </div>
                 </div>
                 <div class="pd-20 bg-white border-radius-4 box-shadow mb-30">
+                    ...
                 </div>
             </div>
             <div class="footer-wrap pd-20 mb-20 card-box">

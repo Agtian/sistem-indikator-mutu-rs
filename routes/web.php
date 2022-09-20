@@ -2,7 +2,7 @@
 
 use App\Http\Controllers\{AuthController};
 use App\Http\Controllers\admin\{HomeController as AdminHomeController};
-use App\Http\Controllers\user\{HomeController as UserHomeController};
+use App\Http\Controllers\user\{HomeController as UserHomeController, InputDataController};
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -25,10 +25,12 @@ Route::post('/auth/login',[AuthController::class, 'postLogin'])->name('postLogin
 
 Route::group(['middleware' => ['admin_auth']], function() {
     // Admin
-    Route::get('/home', [AdminHomeController::class, 'index'])->name('home');
-
+    Route::get('/dashboard', [AdminHomeController::class, 'index'])->name('dashboard');
+    
     // User
     Route::get('/home', [UserHomeController::class, 'index'])->name('home');
+    Route::get('/input', [InputDataController::class, 'index'])->name('input');
+
 
 
     Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
