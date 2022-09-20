@@ -23,11 +23,13 @@ Route::get('/', function () {
 Route::get('/auth/login', [AuthController::class, 'index'])->name('getLogin');
 Route::post('/auth/login',[AuthController::class, 'postLogin'])->name('postLogin');
 
-// Admin
-Route::get('/home', [AdminHomeController::class, 'index'])->name('home');
+Route::group(['middleware' => ['admin_auth']], function() {
+    // Admin
+    Route::get('/home', [AdminHomeController::class, 'index'])->name('home');
 
-// User
-Route::get('/home', [UserHomeController::class, 'index'])->name('home');
+    // User
+    Route::get('/home', [UserHomeController::class, 'index'])->name('home');
 
 
-Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
+    Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
+});
