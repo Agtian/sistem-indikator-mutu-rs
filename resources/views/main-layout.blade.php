@@ -20,7 +20,16 @@
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/vendors/styles/core.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/vendors/styles/icon-font.min.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/vendors/styles/style.css') }}">
+	
+	<link rel="stylesheet" type="text/css" href="{{ asset('assets/src/plugins/fullcalendar/fullcalendar.css') }}">
 
+	<!-- js -->
+	<script src="{{ asset('assets/vendors/scripts/core.js') }}"></script>
+	<script src="{{ asset('assets/vendors/scripts/script.min.js') }}"></script>
+	<script src="{{ asset('assets/vendors/scripts/process.js') }}"></script>
+	<script src="{{ asset('assets/vendors/scripts/layout-settings.js') }}"></script>
+	
+	<script src="{{ asset('assets/src/plugins/fullcalendar/fullcalendar.min.js') }}"></script>
 
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-119386393-1"></script>
@@ -33,7 +42,7 @@
 	</script>
 </head>
 <body>
-	<div class="pre-loader">
+	{{-- <div class="pre-loader">
 		<div class="pre-loader-box">
 			<div class="loader-logo"><img src="{{ asset('assets/vendors/images/deskapp-logo.svg') }}" alt=""></div>
 			<div class='loader-progress' id="progress_div">
@@ -44,7 +53,7 @@
 				Loading...
 			</div>
 		</div>
-	</div>
+	</div> --}}
 
 	<!-- Topbar -->
     @include('partials.topbar')
@@ -58,10 +67,6 @@
     @yield('content')
     <!-- End Content -->
 
-	<!-- js -->
-	<script src="{{ asset('assets/vendors/scripts/core.js') }}"></script>
-	<script src="{{ asset('assets/vendors/scripts/script.min.js') }}"></script>
-	<script src="{{ asset('assets/vendors/scripts/process.js') }}"></script>
-	<script src="{{ asset('assets/vendors/scripts/layout-settings.js') }}"></script>
+	
 </body>
 </html>

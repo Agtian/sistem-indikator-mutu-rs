@@ -32,7 +32,9 @@
                     </div>
                 </div>
                 <div class="pd-20 bg-white border-radius-4 box-shadow mb-30">
-                    ...
+					<div class="calendar-wrap">
+						<div id='calendar'></div>
+					</div>
                 </div>
             </div>
             <div class="footer-wrap pd-20 mb-20 card-box">
@@ -40,4 +42,67 @@
             </div>
         </div>
     </div>
+
+    <!-- calendar modal -->
+    <div id="modal-view-event" class="modal modal-top fade calendar-modal">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <h4 class="h4"><span class="event-icon weight-400 mr-3"></span><span class="event-title"></span></h4>
+                    <div class="event-body"></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-view-warning" class="modal modal-top fade calendar-modal">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <h4 class="h4">Perhatian</h4>
+                    <p>Tidak dapat input, karena data telah tersedia.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- calendar modal -->
+    <div id="modal-view-add" class="modal modal-top fade calendar-modal">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <form id="add-event">
+                    <div class="modal-body">
+                        <h4 class="text-blue h4 mb-10">Input indikator</h4>
+                        <div class="form-group">
+                            <label>Tanggal</label>
+                            <input type="text" class="form-control" name="itanggal" id="itanggal" readonly>
+                        </div>
+                        <hr>
+                        <div class="form-group">
+                            <label>Indikator 1</label><br>
+                            <label style="margin-bottom: -10px;">Num 1</label>
+                            <input type="text" class="form-control mb-10" name="num" id="num">
+                            <label style="margin-bottom: -10px;">Den 1</label>
+                            <input type="text" class="form-control" name="den" id="den">
+                        </div>
+                        <hr style="margin-top: -10px">
+                        <input type="hidden" id="icolor" name="icolor" value="fc-bg-blue">
+                        <input type="hidden" id="iicon" name="iicon" value="calendar">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary" >Save</button>
+                        <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    @include('user.kelola-data.components.scripts')
 @endsection
